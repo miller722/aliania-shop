@@ -559,5 +559,14 @@
       "expanded": "Rozwinięty formularz odbiorcy karty prezentowej",
       "collapsed": "Zwinięty formularz odbiorcy karty prezentowej"
     }
+  },
+  "customer_accounts": {
+    "payment_methods": {
+      "pay_pal": {
+        "errors": {
+          "generic": "Wystąpił problem z PayPalem. Spróbuj ponownie lub użyj innej metody płatności."
+        }
+      }
+    }
   }
 }

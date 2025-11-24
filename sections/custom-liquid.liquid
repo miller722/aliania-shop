@@ -1,3 +1,49 @@
+{% assign specs = product.metafields.custom.panel_spec_list.value %}
+
+<table class="spec-table">
+  <thead>
+    <tr>
+      <th>Параметр</th>
+      {% for item in specs %}
+        <th>{{ item.mm }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th>Показник теплопередачі U [W/m2K]</th>
+      {% for item in specs %}
+        <td>{{ item.u_w_m2k }}</td>
+      {% endfor %}
+    </tr>
+
+    <tr>
+      <th>Пожежні показники [EI]</th>
+      {% for item in specs %}
+        <td>{{ item.ee }}</td>
+      {% endfor %}
+    </tr>
+
+    <tr>
+      <th>Коефіцієнт теплопровідності λD</th>
+      {% for item in specs %}
+        <td>{{ item.er }}</td>
+      {% endfor %}
+    </tr>
+
+    <tr>
+      <th>Щільність [kg/m3]</th>
+      {% for item in specs %}
+        <td>{{ item.kg_m3 }}</td>
+      {% endfor %}
+    </tr>
+  </tbody>
+</table>
+
+
+
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: calc({{ section.settings.padding_top }}px * 0.75);
@@ -16,6 +62,8 @@
     {{ section.settings.custom_liquid }}
   </div>
 </div>
+
+
 
 {% schema %}
 {
